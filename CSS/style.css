@@ -7,7 +7,7 @@ html {
 }
 
 .gradient-background {
-    position: absolute;
+    position: relative;
     z-index: -99;
     width: 100vw;
 }
@@ -51,7 +51,7 @@ html {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 101;
   }
   
   .menu-btn > span,
@@ -79,7 +79,6 @@ html {
     opacity: 0;
     display: block;
     position: fixed;
-    
     top: 0%;
     right: -100%;
     width: 100%;
@@ -90,6 +89,7 @@ html {
     background-color: #AADDFF;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
     transition-duration: .25s;
+    z-index: 100;
   }
 
   .menu-item {
@@ -108,26 +108,120 @@ html {
     background-color: #88ccf9;
   }
   
-  .test {
+  .grey-box {
     position: fixed;
     left: 0%;
     top: 0%;
     right: 0%;
     bottom: 0%;
-    z-index: 0;
     display: none;
     overflow: visible;
     background-color: #262626;
     opacity: 0.35;
+    z-index: 100;
   }
 
+  .svg-container {
+    position: absolute;
+    top: 100px;
+    z-index: 20;
+    height: 100vh;
+    width: 100vw;
+  }
 
+  .titleone {
+    position: relative;
+    animation-name: slidedown;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+
+  @keyframes slidedown {
+    0% {
+      opacity: 0;
+      transform: translateY(-60%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .titletwo {
+    position: relative;
+    animation-name: slidedowntwo;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-delay: .2s;
+    overflow: hidden;
+    
+  }
+
+  @keyframes slidedowntwo {
+    0% {
+      opacity: 0;
+      transform: translateY(-60%);
+    } 
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .titlethree {
+    position: relative;
+    z-index: -10;
+    animation-name: slidedownthree;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-delay: .3s;
+    overflow: hidden;
+  }
+
+  @keyframes slidedownthree {
+    0% {
+      opacity: 0;
+      transform: translateY(-60%);
+    } 
+    60% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Sektion om Mux */
+
+  .om-mux {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .om-mux svg {
+    position: relative;
+    width: 40%;
+  }
+
+  
 @media only screen and (min-width: 700px) {
     .menu-box {
       width: 60%;
     }
 
-    #menu-toggle:checked ~ .test {
+    #menu-toggle:checked ~ .grey-box {
       display: block;
     }
 }
