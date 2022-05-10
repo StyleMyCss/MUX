@@ -36,7 +36,7 @@ const observer = new IntersectionObserver(entries => {
         entry.target.classList.toggle("show", entry.isIntersecting)
     })
 }, {
-    threshold: 1;
+    threshold: 1,
 })
 
 animation.forEach(card => {
