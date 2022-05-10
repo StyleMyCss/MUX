@@ -27,3 +27,18 @@ mySVG.setAttribute("viewBox", "0 -12 300 12");
 
 var mySVG = document.getElementById('svg2');
 mySVG.setAttribute("viewBox", "0 -12 300 12.5");
+
+
+const animation = document.querySelectorAll('class for animationer') 
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+    })
+}, {
+    threshold: 1;
+})
+
+animation.forEach(card => {
+    observer.observe(animation)
+})
