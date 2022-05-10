@@ -21,3 +21,9 @@ document.querySelector('video').playbackRate = 0.2;
 
 //     path.style.strokeDashoffset = pathlength - drawLength;
 // })
+
+var mySVG = document.getElementById('svg1');
+mySVG.setAttribute("viewBox", "0 -12 300 12");
+
+var mySVG = document.getElementById('svg2');
+mySVG.setAttribute("viewBox", "0 -12 300 12.5");
