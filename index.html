@@ -14,10 +14,11 @@
 <body>
 
     <header>
-        <img class="mux-logo" src="Media/Images/Mux-logo-alpha.png" alt="Mux logo uden baggrund">
+        <img id="mux-logo" src="Media/Images/Mux-logo-alpha.png" alt="Mux logo uden baggrund">
         <video class="gradient-background" src="Media/Videos/Gradient-background.mp4" autoplay muted loop></video> 
 
         <nav>
+            <a class="frivillig-btn" href="">Bliv Frivillig</a>
             <div class="hamburger-menu">
                 <input id="menu-toggle" type="checkbox"/>
                 <label class="menu-btn" for="menu-toggle">
@@ -70,7 +71,9 @@
                 At tage til koncert er ikke længere kun at høre musik.
                 Det handler også om, hvilket rum man står i og hvordan dette rum bliver inkorperet som en del af koncertoplevelsen. Dette er præcis, hvad MUX arbejder med.</p>
         </div>
-        <img class="mux-logo-streger" src="Media/Images/Mux-Recovered.svg" alt="">
+        <div class="mux-streger-container">
+            <img class="mux-logo-streger" src="Media/Images/Mux-Recovered.svg" alt="">
+        </div>
         <div class="box">
             <div class="underoverskrift"><h3>Vores Vision</h3></div>
             <p>MUX er en forening, der skaber tværæstetiske oplevelser med det formål at fremme såvel det aarhusianske såvel som det danske kunst- og musikvækstlag. Vi giver upcoming kunstnere muligheden for at udvikle live-kompetencer og indgå i nye fællesskaber. 
@@ -82,47 +85,99 @@
     <!-- Sektion: Galleri -->
 
     <div class="galleri">
-        <video style="overflow: hidden;" src="Media/Videos/Gradient-background.mp4"></video>
+        <video style="overflow: hidden;" src="Media/Videos/Gradient-background.mp4" autoplay muted loop></video>
 
         <div class="galleri-titel">
-            <h2>DIN KONCERTOPLEVELSE</h2>
-            <svg viewbox="0 0 300 18">
-                <text x="90" y="15" text-anchor="left" fill="none" stroke-width=".315" stroke="#fff" font-family="'Prompt'">GENOPFUNDET</text>
+            <h2 class="animation">DIN KONCERTOPLEVELSE</h2>
+            <svg class="animation" viewbox="0 0 300 18">
+                <text  x="90" y="15" text-anchor="left" fill="none" stroke-width=".315" stroke="#fff" font-family="'Prompt'">GENOPFUNDET</text>
             </svg>
         </div>
 
         <div id="lower-img">
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img floatup-one hover-this"></div>
+            <div class="img floatup-three hover-this"></div>
         </div>
         <div>
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img floatup-two hover-this"></div>
+            <div class="img floatup-four hover-this"></div>
         </div>
         <div id="lower-img">
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img floatup-one hover-this"></div>
+            <div class="img floatup-three hover-this"></div>
         </div>
         <div>
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img floatup-two hover-this"></div>
+            <div class="img floatup-four hover-this"></div>
         </div>
         <div id="lower-img">
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img floatup-one hover-this"></div>
+            <div class="img floatup-three hover-this"></div>
         </div>
         <div>
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img floatup-two hover-this"></div>
+            <div class="img floatup-four hover-this"></div>
         </div>
         <div id="lower-img">
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img floatup-one hover-this"></div>
+            <div class="img floatup-three hover-this"></div>
         </div>
         
     </div>
 
-    
+    <div class="footer">
+        <p class="designet-af-class">Designet & udviklet af</p>
+        <div class="card gem-popup">
+            <div class="text">
+            <div class="title">
+                Designet & udviklet af:
+                <div class="tooltip">
+                <div class="tooltip-spacing">
+                    <div class="tooltip-bg1"></div>
+                    <div class="tooltip-bg2"></div>
+                    <div class="tooltip-text">?</div>
+                </div>
+                </div>
+                <svg class="popup-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 130" height="130" width="300">
+                <path d="M36.5 12.695c15.9-2.4 32.556-4.284 82.977-3.815 79.67.74 121.785.26 145.294 5.51 18.483 4.13 34.333 11.696 33.382 32.11l-1.696 36.39c-1.01 21.68-11.678 29.377-21.934 30.838-14.884 2.12-29.72 3.52-54.512-.848C232.522 118.263 233.5 129 233.5 129s-1.992-7.686-32.218-14c-17.933-5.043-118.204 3.687-163.51-2.544-21.317-2.932-33.706-8.26-34.228-27.022L2.272 39.717c-.46-16.58 12.34-23.718 34.23-27.022z" fill="#303030" stroke="#000" />
+                </svg>
+                <svg class="popup-outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 130" height="130" width="300">
+                <g stroke-width="2" stroke-linecap="round">
+                    <path class="popup-outline-left" d="M233.5 129s-1.992-7.686-32.218-14c-17.933-5.043-118.204 3.687-163.51-2.544-21.317-2.932-33.706-8.26-34.228-27.022L2.272 39.717c-.46-16.58 12.34-23.718 34.23-27.022 15.897-2.4 32.554-4.284 82.975-3.815" fill="none" stroke="#303030" />
+                    <path class="popup-outline-right" d="M119.477 8.88c79.67.74 121.785.26 145.294 5.51 18.483 4.13 34.333 11.696 33.382 32.11l-1.696 36.39c-1.01 21.68-11.678 29.377-21.934 30.838-14.884 2.12-29.72 3.52-54.512-.848C232.522 118.263 233.5 129 233.5 129" fill="none" stroke="#303030" />
+                </g>
+                </svg>
+                <div class="popup-text">
+                Siden er lavet som et 2. semester eksamens prokekt. <br>
+                Klik på et navn for at se deres respektive portfolie!
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    Udviklet af: <br>
+                    <a href="http://mathiasqm.dk">Mathias Quist Michaelsen</a>
+                    <p>Mail: mathiasqm@gmail.com</p>
+                    <br>
+                    <a href="">Malte Krog </a>
+                    <p>Mail:</p>
+                </div>
+
+                <div>
+                    Design & Content af: <br>
+                    <a href="">Mikkel Werner Jansen</a>
+                    <p>Mail:</p>
+                    <br> 
+                    <a href="">Frederik schmidt</a>
+                    <p>Mail:</p>
+                </div>
+
+            </div>
+            </div>
+            <div class="buttons">
+            <div class="button-primary">Okay</div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="JS/script.js"></script>
 </body>
 </html>
